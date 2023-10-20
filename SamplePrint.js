@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { BluetoothEscposPrinter } from 'react-native-bluetooth-escpos-printer';
-import { hsdLogo } from './dummy-logo';
 
 const SamplePrint = () => {
   return (
@@ -61,114 +60,11 @@ const SamplePrint = () => {
           onPress={async () => {
             let columnWidths = [8, 20, 20];
             try {
-              await BluetoothEscposPrinter.printText('\r\n\r\n\r\n', {});
-              await BluetoothEscposPrinter.printPic(hsdLogo, { width: 250, left: 150 });
               await BluetoothEscposPrinter.printerAlign(BluetoothEscposPrinter.ALIGN.CENTER);
-              await BluetoothEscposPrinter.printColumn(
-                [48],
-                [BluetoothEscposPrinter.ALIGN.CENTER],
-                ['Jl. Brigjen Saptadji Hadiprawira No.93'],
-                {},
-              );
-              await BluetoothEscposPrinter.printColumn(
-                [32],
-                [BluetoothEscposPrinter.ALIGN.CENTER],
-                ['https://xfood.id'],
-                {},
-              );
-              await BluetoothEscposPrinter.printText(
-                '================================================',
-                {},
-              );
-              await BluetoothEscposPrinter.printColumn(
-                [24, 24],
-                [BluetoothEscposPrinter.ALIGN.LEFT, BluetoothEscposPrinter.ALIGN.RIGHT],
-                ['Customer', 'Prawito Hudoro'],
-                {},
-              );
-              await BluetoothEscposPrinter.printColumn(
-                [24, 24],
-                [BluetoothEscposPrinter.ALIGN.LEFT, BluetoothEscposPrinter.ALIGN.RIGHT],
-                ['Packaging', 'Iya'],
-                {},
-              );
-              await BluetoothEscposPrinter.printColumn(
-                [24, 24],
-                [BluetoothEscposPrinter.ALIGN.LEFT, BluetoothEscposPrinter.ALIGN.RIGHT],
-                ['Delivery', 'Ambil Sendiri'],
-                {},
-              );
-              await BluetoothEscposPrinter.printText(
-                '================================================',
-                {},
-              );
-              await BluetoothEscposPrinter.printText('Products\r\n', { widthtimes: 1 });
-              await BluetoothEscposPrinter.printText(
-                '================================================',
-                {},
-              );
-              await BluetoothEscposPrinter.printColumn(
-                columnWidths,
-                [
-                  BluetoothEscposPrinter.ALIGN.LEFT,
-                  BluetoothEscposPrinter.ALIGN.LEFT,
-                  BluetoothEscposPrinter.ALIGN.RIGHT,
-                ],
-                ['1x', 'Cumi-Cumi', 'Rp.200.000'],
-                {},
-              );
-              await BluetoothEscposPrinter.printColumn(
-                columnWidths,
-                [
-                  BluetoothEscposPrinter.ALIGN.LEFT,
-                  BluetoothEscposPrinter.ALIGN.LEFT,
-                  BluetoothEscposPrinter.ALIGN.RIGHT,
-                ],
-                ['1x', 'Tongkol Kering', 'Rp.300.000'],
-                {},
-              );
-              await BluetoothEscposPrinter.printColumn(
-                columnWidths,
-                [
-                  BluetoothEscposPrinter.ALIGN.LEFT,
-                  BluetoothEscposPrinter.ALIGN.LEFT,
-                  BluetoothEscposPrinter.ALIGN.RIGHT,
-                ],
-                ['1x', 'Ikan Tuna', 'Rp.400.000'],
-                {},
-              );
-              await BluetoothEscposPrinter.printText(
-                '================================================',
-                {},
-              );
-              await BluetoothEscposPrinter.printColumn(
-                [24, 24],
-                [BluetoothEscposPrinter.ALIGN.LEFT, BluetoothEscposPrinter.ALIGN.RIGHT],
-                ['Subtotal', 'Rp.900.000'],
-                {},
-              );
-              await BluetoothEscposPrinter.printColumn(
-                [24, 24],
-                [BluetoothEscposPrinter.ALIGN.LEFT, BluetoothEscposPrinter.ALIGN.RIGHT],
-                ['Packaging', 'Rp.6.000'],
-                {},
-              );
-              await BluetoothEscposPrinter.printColumn(
-                [24, 24],
-                [BluetoothEscposPrinter.ALIGN.LEFT, BluetoothEscposPrinter.ALIGN.RIGHT],
-                ['Delivery', 'Rp.0'],
-                {},
-              );
-              await BluetoothEscposPrinter.printText(
-                '================================================',
-                {},
-              );
-              await BluetoothEscposPrinter.printColumn(
-                [24, 24],
-                [BluetoothEscposPrinter.ALIGN.LEFT, BluetoothEscposPrinter.ALIGN.RIGHT],
-                ['Total', 'Rp.906.000'],
-                {},
-              );
+              await  BluetoothEscposPrinter.printText("UAT TAMAN SAFARI BOGOR",{
+                
+              });
+            
               await BluetoothEscposPrinter.printText('\r\n\r\n', {});
               await BluetoothEscposPrinter.printerAlign(BluetoothEscposPrinter.ALIGN.CENTER);
               await BluetoothEscposPrinter.printQRCode(
